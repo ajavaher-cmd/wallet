@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Divider from '@material-ui/core/Divider';
 import useStyles from './Styles';
@@ -7,7 +6,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import SortIcon from '@material-ui/icons/Sort';
 import SettingsIcon from '@material-ui/icons/Settings';
 import data from './../../../data/data';
-import {useDispatch, useSelector} from 'react-redux';
+import {useDispatch} from 'react-redux';
 import {getId } from './../../../actions/posts'
 
 
@@ -17,7 +16,6 @@ import {getId } from './../../../actions/posts'
 function Left() {
     const classes = useStyles();
     const dispatch = useDispatch()
-    const state = useSelector(state => state.state)
 
   useEffect(() => {
     dispatch(getId({
@@ -28,7 +26,7 @@ function Left() {
       address: 'ewohwwfhiowufhwioufhwiuehf',
       PublicKey: '345543245433er3er3erferfrewer'
      }))
-  }, [])
+  }, [dispatch])
 
     return (
         <div>
@@ -44,7 +42,7 @@ function Left() {
               <Divider />
               {data.map((item)=>(
                 <div className={classes.item} onClick={()=>dispatch(getId(item))}>
-                <img src={item.img} style={{width:30}}/>
+                <img src={item.img} alt='img' style={{width:30}}/>
                 <span style={{marginLeft:10, fontWeight:'bold'}}>{item.name}<sup style={{color:'grey', fontSize:9}}>{item.id}</sup></span>
                 <span style={{marginLeft:'auto'}}>{item.amount}</span>
                 

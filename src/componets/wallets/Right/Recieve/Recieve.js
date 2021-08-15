@@ -1,8 +1,7 @@
 import React,{ Suspense }  from 'react';
 import Grid from '@material-ui/core/Grid';
-import {useDispatch, useSelector} from 'react-redux';
+import {useSelector} from 'react-redux';
 import Button from '@material-ui/core/Button';
-import Paper from '@material-ui/core/Paper';
 
 
 const QR = React.lazy(() => import('./QR'));

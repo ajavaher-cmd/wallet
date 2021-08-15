@@ -5,17 +5,14 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Wallets from '../wallets';
 import Divider from '@material-ui/core/Divider';
-import { transactions } from '../../../data/data';
 import History from './History/History';
 import Recieve from './Recieve/Recieve';
 import Send from './Send/Send';
 import Exchange from './Exchange/Exchange';
-import {useDispatch, useSelector} from 'react-redux';
+import { useSelector} from 'react-redux';
 
 function TabPanel(props) {
     const { children, value, index, ...other } = props;

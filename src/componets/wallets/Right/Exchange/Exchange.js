@@ -12,7 +12,7 @@ function Exchange() {
         options={data}
         renderOption={(option) => (
         <React.Fragment>
-          <img src={option.img} style={{width:30, marginRight:10}}/>
+          <img src={option.img} alt='img' style={{width:30, marginRight:10}}/>
           {option.name}
         </React.Fragment>
       )}
@@ -20,7 +20,7 @@ function Exchange() {
         style={{ width: 300,marginTop:-20 }}
         renderInput={(params,option) => 
         <React.Fragment>
-            <img src={params.img} style={{width:30}}/>
+            <img src={params.img} alt='img' style={{width:30}}/>
             <TextField {...params} label={params.name} variant="outlined" />
         </React.Fragment>
     }
@@ -32,7 +32,7 @@ function Exchange() {
         options={data}
         renderOption={(option) => (
         <React.Fragment>
-          <img src={option.img} style={{width:30, marginRight:10}}/>
+          <img src={option.img} alt='img' style={{width:30, marginRight:10}}/>
           {option.name}
         </React.Fragment>
       )}
@@ -40,7 +40,7 @@ function Exchange() {
         style={{ width: 300,marginTop:-20 }}
         renderInput={(params,option) => 
         <React.Fragment>
-            <img src={params.img} style={{width:30}}/>
+            <img src={params.img} alt='img' style={{width:30}}/>
             <TextField {...params} label={params.name} variant="outlined" />
         </React.Fragment>
     }

@@ -1,19 +1,15 @@
 import React, {useEffect, useState} from 'react'
 import data from '../../data/data';
 import useStyles from './Styles';
-
-import {useDispatch, useSelector} from 'react-redux';
-import { getId } from '../../actions/posts';
 import axios from 'axios';
 
 
 function Left() {
     const classes = useStyles();
-    const dispatch = useDispatch()
-    const state = useSelector(state => state.state)
+    
     const [price, setPrice] = useState([]);
     const [chart, setChart] = useState([])
-    const [id, setId] = useState('')
+   
 
     // function currentPrice(id) {
             
@@ -37,9 +33,7 @@ function Left() {
 //     setChart(chart=>[...price,res.data])
 //     )))
 //    }, [])
-    function convert(arr) {
-        
-    }
+    
 //    useEffect(() => {
 //     axios.all(data.map((item)=>axios.get(`https://api.coingecko.com/api/v3/coins/${item.id}`,
 //     data.map((item)=>axios.get(`https://api.coingecko.com/api/v3/coins/${item.id}/market_chart?vs_currency=usd&days=7`))))).then(axios.spread((...res)=>{
@@ -87,7 +81,7 @@ function Left() {
         <div >
             {price.map((item)=>(
                 <div className={classes.item} >
-                <img src={item.data.image.small} style={{width:30, position: 'relative', left:1}}/>
+                <img src={item.data.image.small} alt='img' vstyle={{width:30, position: 'relative', left:1}}/>
                 <span style={{marginLeft:10, fontWeight:'bold'}}>{item.data.name}  </span>
                 <span style={{position:'absolute',left:200}}> {item.data.id}</span>
                 <span style={{position:'absolute',left:350}}>{item.data.market_data.current_price.usd}</span>

@@ -1,6 +1,6 @@
 import React, {useState,useEffect} from 'react';
-import { LineChart, Line,AreaChart,Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import {useDispatch, useSelector} from 'react-redux';
+import { AreaChart,Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
+import {useSelector} from 'react-redux';
 import axios from 'axios';
 import moment from 'moment';
 

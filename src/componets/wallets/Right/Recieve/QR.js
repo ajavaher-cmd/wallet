@@ -1,4 +1,4 @@
-import React,{Suspense} from 'react';
+import React from 'react';
 var QRCode = require('qrcode.react');
 
 function QR({value}) {

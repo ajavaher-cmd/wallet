@@ -2,7 +2,7 @@ import React from 'react'
 import { transactions } from '../../../../data/data'
 
 function History() {
-    let t=transactions;
+    
 
     return (
         <div>
@@ -11,7 +11,7 @@ function History() {
                 <table style={{width:'100%'}}>
                 <tr>
                 <td>
-                <img src={item.img} style={{width:17}}/>
+                <img src={item.img} alt='img' style={{width:17}}/>
                 </td>
                 <td>
                 <span>{item.id}</span>
